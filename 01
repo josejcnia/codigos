@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauta de Evaluación Clínica Jurídica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .firma {
+            border-top: 1px solid #000;
+            margin-top: 50px;
+            padding-top: 10px;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>PAUTA DE EVALUACIÓN CLÍNICA JURÍDICA</h1>
+    <h2>Ejercicio de Primera Entrevista - Derecho</h2>
+
+    <h2>I. Descripción de los niveles de logro</h2>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Significado</th>
+            <th>Rango de notas</th>
+            <th>Contenido</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Malo<br>Deficiente<br>Insuficiente</td>
+            <td>1 al 1.9<br>2 al 2.9<br>3 al 3.9</td>
+            <td>El estudiante no realiza las acciones esperadas y/o las realiza de forma insipiente, evidenciando el bajo cumplimiento de los estándares mínimos de desempeño profesional.<br><br>Desempeño global: el estudiante no puede ser certificado por las manifiestas debilidades evidenciadas en al menos uno de los componentes del desempeño.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Suficiente</td>
+            <td>4 al 4.9</td>
+            <td>El estudiante realiza las acciones mínimas aceptables y/o su ejecución es medianamente logrado pudiendo certificar que se ajusta al desempeño profesional, pero de manera mínima. Se le hacen importantes correcciones a su desempeño.<br><br>Desempeño global: el estudiante puede ser certificado, si bien reconociendo que presenta algunas debilidades que no comprometen de manera definitiva su actuación.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Bueno</td>
+            <td>5 al 5.9</td>
+            <td>El estudiante realiza las acciones necesarias para un buen desempeño profesional ajustándose a un estándar de calidad y adecuado. Se le hacen correcciones menores.<br><br>Desempeño global: el estudiante puede ser certificado, reconociendo que su actuación se ajusta apropiadamente a las buenas prácticas profesionales en nivel inicial.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Muy bueno<br>Sobresaliente</td>
+            <td>6 al 6.5<br>6.6 al 7</td>
+            <td>El desempeño del estudiante excede las expectativas y cumple, con buena calidad, las acciones identificadas en cada dimensión evaluativa. No se le hacen observaciones.<br><br>Desempeño global: el estudiante puede ser certificado, reconociendo que su actuación se ajusta a las buenas prácticas profesionales excediendo lo esperable de un estudiante en su nivel de formación</td>
+        </tr>
+    </table>
+
+    <h2>II. Antecedentes generales</h2>
+    <table>
+        <tr>
+            <td>Fecha:</td>
+            <td><input type="date" id="fecha"></td>
+        </tr>
+        <tr>
+            <td>Estudiante:</td>
+            <td><input type="text" id="estudiante"></td>
+        </tr>
+        <tr>
+            <td>Caso:</td>
+            <td><input type="text" id="caso"></td>
+        </tr>
+        <tr>
+            <td>Acción:</td>
+            <td><input type="text" id="accion"></td>
+        </tr>
+        <tr>
+            <td>Observador:</td>
+            <td><input type="text" id="observador"></td>
+        </tr>
+    </table>
+
+    <h2>III. Escala de apreciación:</h2>
+    <table id="evaluacion">
+        <tr>
+            <th>Dimensión</th>
+            <th>Criterios</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>Nota por Criterio</th>
+        </tr>
+        <!-- I- Aspectos Formales -->
+        <tr>
+            <td rowspan="4">I- Aspectos Formales</td>
+            <td>El lugar para la entrevista es apropiado y se encuentra limpio.</td>
+            <td><input type="radio" name="af1" value="1" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af1" value="2" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af1" value="3" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af1" value="4" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Saluda al cliente y se presenta.</td>
+            <td><input type="radio" name="af2" value="1" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af2" value="2" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af2" value="3" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af2" value="4" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Utiliza una presentación personal apropiada para la atención de público.</td>
+            <td><input type="radio" name="af3" value="1" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af3" value="2" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af3" value="3" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af3" value="4" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Utiliza un comportamiento educado y cortés con el cliente.</td>
+            <td><input type="radio" name="af4" value="1" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af4" value="2" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af4" value="3" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="radio" name="af4" value="4" class="puntaje" data-dimension="aspectos_formales"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <!-- II- Preparación de la Entrevista -->
+        <tr>
+            <td rowspan="3">II- Preparación de la Entrevista</td>
+            <td>Conoce el derecho aplicable al caso.</td>
+            <td><input type="radio" name="pe1" value="1" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe1" value="2" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe1" value="3" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe1" value="4" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Define sus objetivos de información.</td>
+            <td><input type="radio" name="pe2" value="1" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe2" value="2" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe2" value="3" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe2" value="4" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Preparadas preguntas básicas.</td>
+            <td><input type="radio" name="pe3" value="1" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe3" value="2" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe3" value="3" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="radio" name="pe3" value="4" class="puntaje" data-dimension="preparacion_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <!-- III-Desarrollo de la Entrevista -->
+        <tr>
+            <td rowspan="9">III-Desarrollo de la Entrevista</td>
+            <td>Adecuado inicio de la entrevista con preguntas de contexto o de vínculo.</td>
+            <td><input type="radio" name="de1" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de1" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de1" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de1" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Adecuada expresión de empatía ante momentos de mayor emocionalidad.</td>
+            <td><input type="radio" name="de2" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de2" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de2" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de2" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Aplica apropiadamente la secuencia comunicacional.</td>
+            <td><input type="radio" name="de3" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de3" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de3" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de3" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Usa adecuadamente las preguntas abiertas.</td>
+            <td><input type="radio" name="de4" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de4" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de4" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de4" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Usa adecuadamente las preguntas cerradas o de precisión.</td>
+            <td><input type="radio" name="de5" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de5" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de5" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de5" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Usa adecuadamente las preguntas circulares.</td>
+            <td><input type="radio" name="de6" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de6" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de6" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de6" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Usa adecuadamente el parafraseo.</td>
+            <td><input type="radio" name="de7" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de7" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de7" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de7" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Realiza preguntas coherentes con los objetivos de información.</td>
+            <td><input type="radio" name="de8" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de8" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de8" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de8" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Se expresa de manera comprensible para el cliente.</td>
+            <td><input type="radio" name="de9" value="1" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de9" value="2" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de9" value="3" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="radio" name="de9" value="4" class="puntaje" data-dimension="desarrollo_entrevista"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <!-- IV-Información dada al Cliente -->
+        <tr>
+            <td rowspan="9">IV-Información dada al Cliente</td>
+            <td>Explica al cliente el trabajo que se puede realizar por él y los límites de éste.</td>
+            <td><input type="radio" name="ic1" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic1" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic1" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic1" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Explica, en términos claros, el diagnóstico jurídico del caso. En caso de ser necesarios, se informa que se requiere mayor estudio o antecedentes antes de hacer una evaluación.</td>
+            <td><input type="radio" name="ic2" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic2" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic2" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic2" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Explica, en términos claros, las diferentes vías de intervención del caso señalando sus ventajas y debilidades.</td>
+            <td><input type="radio" name="ic3" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic3" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic3" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic3" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Fomenta la autonomía del cliente, de tal manera que tome decisiones de manera informada e independiente.</td>
+            <td><input type="radio" name="ic4" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic4" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic4" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic4" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Evita mencionar resultados al cliente o bien, señalar plazos de manera categórica.</td>
+            <td><input type="radio" name="ic5" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic5" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic5" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic5" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Informa al cliente sobre la forma de trabajo y los pasos a seguir.</td>
+            <td><input type="radio" name="ic6" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic6" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic6" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic6" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Informa al cliente la forma de comunicación (datos de contacto, horarios de atención, etc.).</td>
+            <td><input type="radio" name="ic7" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic7" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic7" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic7" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Informa sobre los costos de la gestión y la forma de pagarlos (honorarios, costos de tramitación).</td>
+            <td><input type="radio" name="ic8" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic8" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic8" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic8" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Reitera con el cliente los acuerdos adoptados mutuamente.</td>
+            <td><input type="radio" name="ic9" value="1" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic9" value="2" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic9" value="3" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="radio" name="ic9" value="4" class="puntaje" data-dimension="informacion_cliente"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <!-- V-Comprensión de la Información Obtenida por la Entrevista -->
+        <tr>
+            <td rowspan="4">V-Comprensión de la Información Obtenida por la Entrevista</td>
+            <td>Reconoce documentación adecuada de la entrevista.</td>
+            <td><input type="radio" name="co1" value="1" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co1" value="2" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co1" value="3" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co1" value="4" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Identifica del conflicto jurídico del caso.</td>
+            <td><input type="radio" name="co2" value="1" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co2" value="2" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co2" value="3" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co2" value="4" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Identifica de la posición e interés de su cliente.</td>
+            <td><input type="radio" name="co3" value="1" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co3" value="2" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co3" value="3" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co3" value="4" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+        <tr>
+            <td>Identifica los antecedentes adicionales que requiere para el estudio del caso.</td>
+            <td><input type="radio" name="co4" value="1" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co4" value="2" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co4" value="3" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="radio" name="co4" value="4" class="puntaje" data-dimension="comprension_informacion"></td>
+            <td><input type="number" min="1" max="4" class="nota" readonly></td>
+        </tr>
+    </table>
+
+    <h2>IV. OBSERVACIONES:</h2>
+    <textarea id="observaciones" rows="4" cols="50"></textarea>
+
+    <h2>V. RESUMEN DE LA EVALUACIÓN:</h2>
+    <table id="resumen">
+        <tr>
+            <th>Dimensión</th>
+            <th>Promedio por dimensión</th>
+        </tr>
+        <tr>
+            <td>1. Aspectos Formales</td>
+            <td id="promedio_aspectos_formales">0</td>
+        </tr>
+        <tr>
+            <td>2. Preparación de la Entrevista</td>
+            <td id="promedio_preparacion_entrevista">0</td>
+        </tr>
+        <tr>
+            <td>3. Desarrollo de la Entrevista</td>
+            <td id="promedio_desarrollo_entrevista">0</td>
+        </tr>
+        <tr>
+            <td>4. Información dada al Cliente</td>
+            <td id="promedio_informacion_cliente">0</td>
+        </tr>
+        <tr>
+            <td>5. Comprensión de la Información Obtenida por la Entrevista</td>
+            <td id="promedio_comprension_informacion">0</td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>
+            <td colspan="2"><strong>Calificación final</strong></td>
+            <td id="calificacion_final">0</td>
+        </tr>
+    </table>
+
+    <div class="firma">
+        <p>Firma estudiante: ____________________</p>
+    </div>
+    <div class="firma">
+        <p>Firma docente evaluador: ____________________</p>
+    </div>
+
+    <button class="no-print" onclick="window.print()">Imprimir / Guardar como PDF</button>
+
+    <script>
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('puntaje')) {
+                calcularPuntajes();
+            }
+        });
+
+        function calcularPuntajes() {
+            let dimensiones = {
+                'aspectos_formales': { sum: 0, count: 0 },
+                'preparacion_entrevista': { sum: 0, count: 0 },
+                'desarrollo_entrevista': { sum: 0, count: 0 },
+                'informacion_cliente': { sum: 0, count: 0 },
+                'comprension_informacion': { sum: 0, count: 0 }
+            };
+
+            document.querySelectorAll('.puntaje').forEach(function(input) {
+                if (input.checked) {
+                    let dimension = input.dataset.dimension;
+                    let value = parseFloat(input.value) || 0;
+                    dimensiones[dimension].sum += value;
+                    dimensiones[dimension].count++;
+                    input.parentElement.parentElement.querySelector('.nota').value = value;
+                }
+            });
+
+            let sumaPonderada = 0;
+            let countDimensiones = 0;
+            for (let dim in dimensiones) {
+                if (dimensiones[dim].count > 0) {
+                    let promedio = dimensiones[dim].sum / dimensiones[dim].count;
+                    document.getElementById('promedio_' + dim).textContent = promedio.toFixed(2);
+                    sumaPonderada += promedio;
+                    countDimensiones++;
+                } else {
+                    document.getElementById('promedio_' + dim).textContent = 'N/A';
+                }
+            }
+
+            let calificacionFinal = countDimensiones > 0 ? (sumaPonderada / countDimensiones) : 0;
+            // Convertir la calificación a escala de 1 a 7
+            calificacionFinal = ((calificacionFinal - 1) / 3) * 6 + 1;
+            document.getElementById('calificacion_final').textContent = calificacionFinal.toFixed(1);
+        }
+    </script>
+</body>
+</html>
