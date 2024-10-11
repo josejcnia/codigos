@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauta de Evaluación Clínica Jurídica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .firma {
+            border-top: 1px solid #000;
+            margin-top: 50px;
+            padding-top: 10px;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Clínica Jurídica: Expresión oral y corporal</h1>
+    <h2>Derecho</h2>
+    <h3>Pauta de evaluación</h3>
+
+    <p>La pauta de evaluación deberá ser aplicada a cada alumno/a de Clínica Jurídica que ejecute acciones de atención al usuario y participe en las distintas instancias jurisdiccionales que implica la gestión de causas de los usuarios. En lo particular, se aplicará en la comparecencia a audiencias ante los tribunales de justicia, en las cuales deba participar en defensa de los derechos del usuario.</p>
+
+    <p>La evaluación de proceso contempla las siguientes dimensiones:</p>
+    <ol>
+        <li>Uso de la Voz</li>
+        <li>Expresión Corporal</li>
+        <li>Desarrollo de ideas</li>
+        <li>Conexión con la audiencia</li>
+    </ol>
+
+    <h2>I. Descripción de los niveles de logro</h2>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Significado</th>
+            <th>Rango de notas</th>
+            <th>Contenido</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Malo<br>Deficiente<br>Insuficiente</td>
+            <td>1 al 1.9<br>2 al 2.9<br>3 al 3.9</td>
+            <td>El estudiante no realiza las acciones esperadas y/o las realiza de forma insipiente, evidenciando el bajo cumplimiento de los estándares mínimos de desempeño profesional.<br><br>Desempeño global: el estudiante no puede ser certificado por las manifiestas debilidades evidenciadas en al menos uno de los componentes del desempeño.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Suficiente</td>
+            <td>4 al 4.9</td>
+            <td>El estudiante realiza las acciones mínimas aceptables y/o su ejecución es medianamente logrado pudiendo certificar que se ajusta al desempeño profesional, pero de manera mínima. Se le hacen importantes correcciones a su desempeño.<br><br>Desempeño global: el estudiante puede ser certificado, si bien reconociendo que presenta algunas debilidades que no comprometen de manera definitiva su actuación.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Bueno</td>
+            <td>5 al 5.9</td>
+            <td>El estudiante realiza las acciones necesarias para un buen desempeño profesional ajustándose a un estándar de calidad y adecuado. Se le hacen correcciones menores.<br><br>Desempeño global: el estudiante puede ser certificado, reconociendo que su actuación se ajusta apropiadamente a las buenas prácticas profesionales en nivel inicial.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Muy bueno<br>Sobresaliente</td>
+            <td>6 al 6.5<br>6.6 al 7</td>
+            <td>El desempeño del estudiante excede las expectativas y cumple, con buena calidad, las acciones identificadas en cada dimensión evaluativa. No se le hacen observaciones.<br><br>Desempeño global: el estudiante puede ser certificado, reconociendo que su actuación se ajusta a las buenas prácticas profesionales excediendo lo esperable de un estudiante en su nivel de formación</td>
+        </tr>
+    </table>
+
+    <h2>II. Antecedentes generales</h2>
+    <table>
+        <tr>
+            <td>Fecha</td>
+            <td><input type="date" id="fecha"></td>
+        </tr>
+        <tr>
+            <td>Estudiante</td>
+            <td><input type="text" id="estudiante"></td>
+        </tr>
+        <tr>
+            <td>Caso</td>
+            <td><input type="text" id="caso"></td>
+        </tr>
+        <tr>
+            <td>Acción</td>
+            <td><input type="text" id="accion"></td>
+        </tr>
+        <tr>
+            <td>Observador</td>
+            <td><input type="text" id="observador"></td>
+        </tr>
+    </table>
+
+    <h2>III. Escala de apreciación</h2>
+    <table id="evaluacion">
+        <tr>
+            <th>Dimensión</th>
+            <th>Criterios</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td rowspan="7">Uso de la Voz</td>
+            <td>Utiliza un buen uso de los diferentes tonos de voz sin mantener un tono monótono.</td>
+            <td><input type="radio" name="voz1" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz1" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz1" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz1" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Se expresa considerando una modulación correcta.</td>
+            <td><input type="radio" name="voz2" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz2" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz2" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz2" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Utiliza un lenguaje apropiado para la situación.</td>
+            <td><input type="radio" name="voz3" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz3" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz3" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz3" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Se expresa con una velocidad apropiada (ni muy rápido ni muy lento).</td>
+            <td><input type="radio" name="voz4" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz4" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz4" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz4" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Utiliza un volumen de voz que le permite ser escuchado por toda la audiencia y es apropiado para el contexto.</td>
+            <td><input type="radio" name="voz5" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz5" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz5" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz5" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Utiliza un apropiado uso (no abrupto) de las pausas en su relato, dando énfasis a ciertas ideas o permitiéndole descansar a su interlocutor.</td>
+            <td><input type="radio" name="voz6" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz6" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz6" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz6" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td>Evita el uso de muletillas en su discurso ("ehh", "mmm", "entonces", etc).</td>
+            <td><input type="radio" name="voz7" value="1" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz7" value="2" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz7" value="3" class="puntaje" data-dimension="voz"></td>
+            <td><input type="radio" name="voz7" value="4" class="puntaje" data-dimension="voz"></td>
+        </tr>
+        <tr>
+            <td rowspan="3">Expresión Corporal</td>
+            <td>Utiliza una expresión corporal apropiada (sin mantener una posición rígida) a la situación.</td>
+            <td><input type="radio" name="cuerpo1" value="1" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo1" value="2" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo1" value="3" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo1" value="4" class="puntaje" data-dimension="cuerpo"></td>
+        </tr>
+        <tr>
+            <td>Es consciente de la comunicación no verbal y evita gestos inconscientes.</td>
+            <td><input type="radio" name="cuerpo2" value="1" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo2" value="2" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo2" value="3" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo2" value="4" class="puntaje" data-dimension="cuerpo"></td>
+        </tr>
+        <tr>
+            <td>Es consciente del espacio personal de la situación y lo respeta de manera apropiada.</td>
+            <td><input type="radio" name="cuerpo3" value="1" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo3" value="2" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo3" value="3" class="puntaje" data-dimension="cuerpo"></td>
+            <td><input type="radio" name="cuerpo3" value="4" class="puntaje" data-dimension="cuerpo"></td>
+        </tr>
+        <tr>
+            <td rowspan="3">Desarrollo de ideas</td>
+            <td>Describe acertadamente la situación, realizando una selección apropiada de descripciones, hechos, detalles y ejemplos.</td>
+            <td><input type="radio" name="ideas1" value="1" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas1" value="2" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas1" value="3" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas1" value="4" class="puntaje" data-dimension="ideas"></td>
+        </tr>
+        <tr>
+            <td>Desarrolla sus ideas según un orden lógico, realizando transiciones apropiadas y dando énfasis a los puntos clave de su discurso de manera coherente.</td>
+            <td><input type="radio" name="ideas2" value="1" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas2" value="2" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas2" value="3" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas2" value="4" class="puntaje" data-dimension="ideas"></td>
+        </tr>
+        <tr>
+            <td>Comunica, eficientemente, su mensaje sin dejar confusa a su audiencia.</td>
+            <td><input type="radio" name="ideas3" value="1" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas3" value="2" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas3" value="3" class="puntaje" data-dimension="ideas"></td>
+            <td><input type="radio" name="ideas3" value="4" class="puntaje" data-dimension="ideas"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">Conexión con la audiencia</td>
+            <td>Desarrolla un relato que permite involucrar a la audiencia.</td>
+            <td><input type="radio" name="conexion1" value="1" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion1" value="2" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion1" value="3" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion1" value="4" class="puntaje" data-dimension="conexion"></td>
+        </tr>
+        <tr>
+            <td>Incita a la audiencia a hacer preguntas de manera apropiada, sin interrumpir su relato.</td>
+            <td><input type="radio" name="conexion2" value="1" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion2" value="2" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion2" value="3" class="puntaje" data-dimension="conexion"></td>
+            <td><input type="radio" name="conexion2" value="4" class="puntaje" data-dimension="conexion"></td>
+        </tr>
+    </table>
+
+    <h2>IV. Observaciones:</h2>
+    <textarea id="observaciones" rows="4" cols="50"></textarea>
+
+    <h2>V. Resumen de la Evaluación:</h2>
+    <table id="resumen">
+        <tr>
+            <th>Dimensión</th>
+            <th>Promedio por dimensión</th>
+        </tr>
+        <tr>
+            <td>1. Uso de la Voz</td>
+            <td id="promedio_voz">0</td>
+        </tr>
+        <tr>
+            <td>2. Expresión Corporal</td>
+            <td id="promedio_cuerpo">0</td>
+        </tr>
+        <tr>
+            <td>3. Desarrollo de ideas</td>
+            <td id="promedio_ideas">0</td>
+        </tr>
+        <tr>
+            <td>4. Conexión con la audiencia</td>
+            <td id="promedio_conexion">0</td>
+        </tr>
+        <tr>
+            <td><strong>Calificación final</strong></td>
+            <td id="calificacion_final">0</td>
+        </tr>
+    </table>
+
+    <div class="firma">
+        <p>Firma del evaluador: ____________________</p>
+    </div>
+
+    <button class="no-print" onclick="window.print()">Imprimir / Guardar como PDF</button>
+
+    <script>
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('puntaje')) {
+                calcularPuntajes();
+            }
+        });
+
+        function calcularPuntajes() {
+            let dimensiones = {
+                'voz': { sum: 0, count: 0 },
+                'cuerpo': { sum: 0, count: 0 },
+                'ideas': { sum: 0, count: 0 },
+                'conexion': { sum: 0, count: 0 }
+            };
+
+            document.querySelectorAll('.puntaje:checked').forEach(function(input) {
+                let dimension = input.dataset.dimension;
+                let value = parseInt(input.value);
+                dimensiones[dimension].sum += value;
+                dimensiones[dimension].count++;
+            });
+
+            let calificacionFinal = 0;
+            let dimensionesValidas = 0;
+
+            for (let dim in dimensiones) {
+                let promedio = dimensiones[dim].count > 0 ? dimensiones[dim].sum / dimensiones[dim].count : 0;
+                // Convertir el promedio de 1-4 a 1-7
+                let promedioConvertido = promedio > 0 ? ((promedio - 1) / 3) * 6 + 1 : 0;
+                document.getElementById('promedio_' + dim).textContent = promedioConvertido.toFixed(1);
+                if (promedioConvertido > 0) {
+                    calificacionFinal += promedioConvertido;
+                    dimensionesValidas++;
+                }
+            }
+
+            calificacionFinal = dimensionesValidas > 0 ? calificacionFinal / dimensionesValidas : 0;
+            
+            // Asegurarse de que la calificación final esté en el rango de 1 a 7
+            calificacionFinal = Math.max(1, Math.min(7, calificacionFinal));
+            
+            document.getElementById('calificacion_final').textContent = calificacionFinal.toFixed(1);
+        }
+    </script>
+</body>
+</html>
