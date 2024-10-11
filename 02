@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Jurídica: Estrategia de Litigación - Pauta de evaluación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .firma {
+            border-top: 1px solid #000;
+            margin-top: 50px;
+            padding-top: 10px;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Clínica Jurídica: Estrategia de Litigación</h1>
+    <h2>Derecho</h2>
+    <h2>Pauta de evaluación</h2>
+
+    <p>La pauta de evaluación deberá ser aplicada a cada alumno/a de Clínica Jurídica, que tenga a su cargo la gestión judicial de causa ante los Tribunales de Justicia y/o el desarrollo y ejecución de gestiones administrativas ante organismos públicos en defensa de los intereses y derechos del usuario, para la evaluación de su correcto desempeño.</p>
+
+    <p>La evaluación de proceso contempla las siguientes dimensiones:</p>
+    <ol>
+        <li>Entendimiento del conflicto</li>
+        <li>Diagnóstico Jurídico</li>
+        <li>Selección de las vías de intervención</li>
+        <li>Elaboración de la argumentación jurídica</li>
+        <li>Elaboración de la estrategia probatoria</li>
+        <li>Elaboración de la estrategia recursiva</li>
+    </ol>
+
+    <h3>I. Antecedentes generales</h3>
+    <table>
+        <tr>
+            <td>Fecha:</td>
+            <td><input type="date" id="fecha"></td>
+        </tr>
+        <tr>
+            <td>Estudiante:</td>
+            <td><input type="text" id="estudiante"></td>
+        </tr>
+        <tr>
+            <td>Caso:</td>
+            <td><input type="text" id="caso"></td>
+        </tr>
+        <tr>
+            <td>Acción:</td>
+            <td><input type="text" id="accion"></td>
+        </tr>
+        <tr>
+            <td>Observador:</td>
+            <td><input type="text" id="observador"></td>
+        </tr>
+    </table>
+
+    <h3>II. Escala de apreciación:</h3>
+    <table id="evaluacion">
+        <tr>
+            <th>Dimensión</th>
+            <th>Criterios</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <!-- I-Entendimiento del conflicto -->
+        <tr>
+            <td rowspan="4">I-Entendimiento del conflicto</td>
+            <td>Identifica a todos los actores del conflicto (principales, secundarios y terceros).</td>
+            <td><input type="radio" name="i1" value="1" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i1" value="2" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i1" value="3" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i1" value="4" class="puntaje" data-dimension="entendimiento"></td>
+        </tr>
+        <tr>
+            <td>Describe comprendiendo la situación problemática.</td>
+            <td><input type="radio" name="i2" value="1" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i2" value="2" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i2" value="3" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i2" value="4" class="puntaje" data-dimension="entendimiento"></td>
+        </tr>
+        <tr>
+            <td>Describe comprendiendo la posición, el interés/necesidad de cada actor y la forma en que el conflicto los afecta.</td>
+            <td><input type="radio" name="i3" value="1" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i3" value="2" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i3" value="3" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i3" value="4" class="puntaje" data-dimension="entendimiento"></td>
+        </tr>
+        <tr>
+            <td>Conoce el contexto social, emocional, económico, cultural e histórico en el cual se desarrolla el conflicto.</td>
+            <td><input type="radio" name="i4" value="1" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i4" value="2" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i4" value="3" class="puntaje" data-dimension="entendimiento"></td>
+            <td><input type="radio" name="i4" value="4" class="puntaje" data-dimension="entendimiento"></td>
+        </tr>
+        <!-- II- Diagnóstico Jurídico -->
+        <tr>
+            <td rowspan="4">II- Diagnóstico Jurídico</td>
+            <td>Identifica los hechos jurídicamente relevantes del caso.</td>
+            <td><input type="radio" name="ii1" value="1" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii1" value="2" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii1" value="3" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii1" value="4" class="puntaje" data-dimension="diagnostico"></td>
+        </tr>
+        <tr>
+            <td>Identifica las instituciones jurídicas aplicables al caso.</td>
+            <td><input type="radio" name="ii2" value="1" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii2" value="2" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii2" value="3" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii2" value="4" class="puntaje" data-dimension="diagnostico"></td>
+        </tr>
+        <tr>
+            <td>Identifica las normas particulares aplicables al caso y es capaz de aplicarlas según los hechos del caso definiendo el problema jurídico que implica el caso.</td>
+            <td><input type="radio" name="ii3" value="1" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii3" value="2" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii3" value="3" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii3" value="4" class="puntaje" data-dimension="diagnostico"></td>
+        </tr>
+        <tr>
+            <td>Elabora un pronóstico jurídico de la situación si no se realiza ninguna forma de intervención a la situación de hecho de caso (el estudiante es capaz de responder, desde un punto de vista jurídico, la pregunta ¿qué sucede si no se hace nada?).</td>
+            <td><input type="radio" name="ii4" value="1" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii4" value="2" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii4" value="3" class="puntaje" data-dimension="diagnostico"></td>
+            <td><input type="radio" name="ii4" value="4" class="puntaje" data-dimension="diagnostico"></td>
+        </tr>
+        <!-- III- Selección de las vías de intervención -->
+        <tr>
+            <td rowspan="2">III- Selección de las vías de intervención</td>
+            <td>Identifica diversas acciones legales para intervenir el caso que consideran la satisfacción del interés de su cliente.</td>
+            <td><input type="radio" name="iii1" value="1" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii1" value="2" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii1" value="3" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii1" value="4" class="puntaje" data-dimension="seleccion"></td>
+        </tr>
+        <tr>
+            <td>Selecciona una de las vías de intervención considerando criterios estratégicos (plazos de prescripción, tipo y tiempo del proceso, forma de evaluación de la prueba, prueba disponible, recursos, tratamiento jurisprudencial, entre otros).</td>
+            <td><input type="radio" name="iii2" value="1" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii2" value="2" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii2" value="3" class="puntaje" data-dimension="seleccion"></td>
+            <td><input type="radio" name="iii2" value="4" class="puntaje" data-dimension="seleccion"></td>
+        </tr>
+        <!-- IV- Elaboración de la argumentación jurídica -->
+        <tr>
+            <td rowspan="6">IV- Elaboración de la argumentación jurídica</td>
+            <td>Identifica las peticiones que se harán al tribunal en función a la satisfacción de los intereses/necesidades del cliente.</td>
+            <td><input type="radio" name="iv1" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv1" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv1" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv1" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <tr>
+            <td>Analiza las particularidades de hecho del caso, definiendo si es un caso de tratamiento judicial rutinario o no.</td>
+            <td><input type="radio" name="iv2" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv2" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv2" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv2" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <tr>
+            <td>Elabora una Teoría del Caso coherente con los hechos del caso y las necesidades/Interés de su cliente.</td>
+            <td><input type="radio" name="iv3" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv3" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv3" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv3" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <tr>
+            <td>Elabora una estructura de argumentación que sea coherente con la Teoría del Caso y relacionada con los hechos del caso.</td>
+            <td><input type="radio" name="iv4" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv4" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv4" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv4" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <tr>
+            <td>Elabora una estructura de argumentación jurídica lógica que justifique y fundamente de manera directa las peticiones que se hacen al tribunal.</td>
+            <td><input type="radio" name="iv5" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv5" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv5" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv5" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <tr>
+            <td>Utiliza de manera apropiada y asertiva las diferentes fuentes legales en su argumentación jurídica (normas, jurisprudencia actualizada y doctrina).</td>
+            <td><input type="radio" name="iv6" value="1" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv6" value="2" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv6" value="3" class="puntaje" data-dimension="argumentacion"></td>
+            <td><input type="radio" name="iv6" value="4" class="puntaje" data-dimension="argumentacion"></td>
+        </tr>
+        <!-- V- Elaboración de la estrategia probatoria -->
+        <tr>
+            <td rowspan="6">V- Elaboración de la estrategia probatoria</td>
+            <td>Conoce las evidencias de las cuales dispone, habiéndolas estudiado y comprendido.</td>
+            <td><input type="radio" name="v1" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v1" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v1" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v1" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <tr>
+            <td>Prepara anticipadamente los hechos a probar en el juicio y relaciona evidencias con cada hecho, distinguiendo entre pruebas directas, indirectas o circunstanciales y de credibilidad.</td>
+            <td><input type="radio" name="v2" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v2" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v2" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v2" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <tr>
+            <td>Identifica las evidencias faltantes que debe conseguir y sabe como obtenerlas.</td>
+            <td><input type="radio" name="v3" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v3" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v3" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v3" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <tr>
+            <td>Conoce la clasificación jurídica de su evidencia según las normas de la prueba del proceso y es capaz de evaluar cuando una evidencia no cumple con los requisitos legales de validez.</td>
+            <td><input type="radio" name="v4" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v4" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v4" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v4" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <tr>
+            <td>Reconoce cómo y cuándo debe incorporar la evidencia al proceso para que tenga validez y según criterios estratégicos.</td>
+            <td><input type="radio" name="v5" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v5" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v5" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v5" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <tr>
+            <td>Conoce las vías de impugnación de evidencia y es capaz de elaborar argumentos en defensa de su prueba.</td>
+            <td><input type="radio" name="v6" value="1" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v6" value="2" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v6" value="3" class="puntaje" data-dimension="probatoria"></td>
+            <td><input type="radio" name="v6" value="4" class="puntaje" data-dimension="probatoria"></td>
+        </tr>
+        <!-- VI- Elaboración de la estrategia recursiva -->
+        <tr>
+            <td rowspan="3">VI- Elaboración de la estrategia recursiva</td>
+            <td>Identifica las resoluciones relevantes del proceso e identifica los recursos procedentes para cada una de ellas.</td>
+            <td><input type="radio" name="vi1" value="1" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi1" value="2" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi1" value="3" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi1" value="4" class="puntaje" data-dimension="recursiva"></td>
+        </tr>
+        <tr>
+            <td>Conoce los efectos procesales de los diferentes recursos que ha identificado previamente (suspensión o no del proceso, formación de incidentes, necesidad de aportar evidencia adicional, etc.).</td>
+            <td><input type="radio" name="vi2" value="1" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi2" value="2" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi2" value="3" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi2" value="4" class="puntaje" data-dimension="recursiva"></td>
+        </tr>
+        <tr>
+            <td>Prepara razonablemente el tiempo de resolución de los recursos posibles.</td>
+            <td><input type="radio" name="vi3" value="1" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi3" value="2" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi3" value="3" class="puntaje" data-dimension="recursiva"></td>
+            <td><input type="radio" name="vi3" value="4" class="puntaje" data-dimension="recursiva"></td>
+        </tr>
+    </table>
+
+    <h3>III. Observaciones:</h3>
+    <textarea id="observaciones" rows="4" cols="50"></textarea>
+
+    <h3>IV. Resumen de la Evaluación:</h3>
+    <table id="resumen">
+        <tr>
+            <th>Dimensión</th>
+            <th>Promedio por dimensión</th>
+        </tr>
+        <tr>
+            <td>1. Entendimiento del conflicto</td>
+            <td id="promedio_entendimiento">0</td>
+        </tr>
+        <tr>
+            <td>2. Diagnóstico Jurídico</td>
+            <td id="promedio_diagnostico">0</td>
+        </tr>
+        <tr>
+            <td>3. Selección de las vías de intervención</td>
+            <td id="promedio_seleccion">0</td>
+        </tr>
+        <tr>
+            <td>4. Elaboración de la argumentación jurídica</td>
+            <td id="promedio_argumentacion">0</td>
+        </tr>
+        <tr>
+            <td>5. Elaboración de la estrategia probatoria</td>
+            <td id="promedio_probatoria">0</td>
+        </tr>
+        <tr>
+            <td>6. Elaboración de la estrategia recursiva</td>
+            <td id="promedio_recursiva">0</td>
+        </tr>
+        <tr>
+            <td><strong>Calificación final</strong></td>
+            <td id="calificacion_final">0</td>
+        </tr>
+    </table>
+
+    <div class="firma">
+        <p>Firma estudiante: ____________________</p>
+    </div>
+    <div class="firma">
+        <p>Firma docente supervisor: ____________________</p>
+    </div>
+
+    <button class="no-print" onclick="window.print()">Imprimir / Guardar como PDF</button>
+
+    <script>
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('puntaje')) {
+                calcularPuntajes();
+            }
+        });
+
+        function calcularPuntajes() {
+            let dimensiones = {
+                'entendimiento': { sum: 0, count: 0 },
+                'diagnostico': { sum: 0, count: 0 },
+                'seleccion': { sum: 0, count: 0 },
+                'argumentacion': { sum: 0, count: 0 },
+                'probatoria': { sum: 0, count: 0 },
+                'recursiva': { sum: 0, count: 0 }
+            };
+
+            document.querySelectorAll('.puntaje:checked').forEach(function(input) {
+                let dimension = input.dataset.dimension;
+                let value = parseInt(input.value);
+                dimensiones[dimension].sum += value;
+                dimensiones[dimension].count++;
+            });
+
+            let calificacionFinal = 0;
+            let dimensionesValidas = 0;
+
+            for (let dim in dimensiones) {
+                let promedio = dimensiones[dim].count > 0 ? dimensiones[dim].sum / dimensiones[dim].count : 0;
+                if (promedio > 0) {
+                    calificacionFinal += promedio;
+                    dimensionesValidas++;
+                }
+                document.getElementById('promedio_' + dim).textContent = promedio.toFixed(1);
+            }
+
+            if (dimensionesValidas > 0) {
+                calificacionFinal = calificacionFinal / dimensionesValidas;
+                // Convertir la calificación a la escala 1-7
+                calificacionFinal = ((calificacionFinal - 1) / 3) * 6 + 1;
+            }
+
+            document.getElementById('calificacion_final').textContent = calificacionFinal.toFixed(1);
+        }
+    </script>
+</body>
+</html>
